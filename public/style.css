@@ -1,0 +1,25 @@
+:root {
+    --background: #4a8beb;
+    --navBackground: #4a8beb;
+}
+
+body {
+    background-image: url(./assets/wario.jpg);
+    background-size: cover;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+}
+
+/* .navTitle {
+    color: #fff;
+    font-size: 2.2em;
+}
+
+.navbar {
+    height: 10vh;
+    background-color: var(--navBackground);
+    border-bottom: 2px solid #7bc0f5; 
+} */
