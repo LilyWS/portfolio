@@ -1,8 +1,8 @@
 :root {
     --about: #e75367;
     --projects: #e6df67;
-    /* --contact: #7fe9db; */
     --contact: #79eede;
+    --dark-gray: #181a18;
 }
 
 * {
@@ -28,7 +28,7 @@ header {
     align-items: center;
     height: 10vh;
     padding: 4vh 2% 0;
-    background-color: #181a18; /* #173f5f, #20639B*/
+    background-color: var(--dark-gray); /* #173f5f, #20639B*/
 
 }
 
@@ -37,9 +37,21 @@ header > a {
     text-decoration: none;
 }
 
-header > a:hover {
-    cursor: pointer;
-    color: #e75367;
+header > a::before {
+    position: absolute;
+    content: attr(data-content);
+    font-size: 3.5em;
+    font-weight: 500;
+    background-color: var(--dark-gray);
+    color: var(--about);
+    opacity: 1;
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    transition: clip-path 75ms ease;
+}
+
+header > a:hover::before {
+    display: show;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 }
 
 nav {
@@ -58,8 +70,24 @@ nav > a {
     text-decoration: none;
 }
 
+nav > a::before {
+    position: absolute;
+    content: attr(data-content);
+    color: var(--highlight-color);
+    background-color: var(--dark-gray);
+    opacity: 1;
+    clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
+    transition: clip-path 100ms ease;
+}
+
 nav > a:hover {
-    color: #e75367;
+    color: white;
+    /* display: none; */
+    /* color: var(--about) */
+}
+
+nav > a:hover::before {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 }
 
 main {
@@ -85,6 +113,9 @@ main h1 {
 
 #contact {
     font-family: ObjectSans;
+}
+
+#contact > h1 {
     border-bottom: 2px solid var(--contact);
 }
 
