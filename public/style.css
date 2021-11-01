@@ -1,7 +1,10 @@
 :root {
     --about: #e75367;
+    --vibrant-about: #f12e48;
     --projects: #e6df67;
-    --contact: #79eede;
+    --vibrant-projects: #f3eb4b;
+    --contact: #75ccc0;
+    --vibrant-contact: #79eede;
     --dark-gray: #181a18;
 }
 
@@ -12,9 +15,11 @@
 body {
     font-family: PrintClearly;
     /* background-color: #374047; */
-    background-color: #181a18;
+    background-color: var(--dark-gray);
     color: white;
 }
+
+/* header styles */
 
 header h1 {
     font-size: 3.5em;
@@ -46,7 +51,7 @@ header > a::before {
     color: var(--about);
     opacity: 1;
     clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
-    transition: clip-path 75ms ease;
+    transition: clip-path 75ms ease-out;
 }
 
 header > a:hover::before {
@@ -77,7 +82,7 @@ nav > a::before {
     background-color: var(--dark-gray);
     opacity: 1;
     clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
-    transition: clip-path 100ms ease;
+    transition: clip-path 100ms ease-out;
 }
 
 nav > a:hover {
@@ -90,33 +95,93 @@ nav > a:hover::before {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
 }
 
+/* body styles */
+
 main {
     display: flex;
+    flex-flow: column nowrap;
     font-family: ObjectSans;
     justify-content: flex-start;
     margin: 10vh auto;
-    max-width: 55vw;
+    min-width: 60vw;
+    max-width: 1000px;
 }
 
 main h1 {
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
-/* section {
-} */
+/* about/home styles */
 
-#home > h1 {
-    border-bottom: 2px solid #f12e48;
+#about > h1 {
+    /* border-bottom: 2px solid var(--vibrant-about); darker about color */
     display: inline-block;
-    line-height: 0.8;
+    /* line-height: 0.9; */
 }
+
+/* projects styles */
+
+#projects > h1 {
+    border-bottom: 2px solid var(--vibrant-projects);
+    display: inline-block;
+    /* line-height: 0.8; */
+}
+
+.project-display {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.project-display > .project {
+    min-width: 20%;
+    height: 20vh;
+    position: relative;
+}
+
+.project > h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#little-village {
+    border: 2px solid white;
+    background-image: url("./assets/little-village.jpg");
+}
+
+#poke-battle {
+    background-image: url("./assets/pokebattle.jpg");
+}
+
+/* contact styles */
 
 #contact {
     font-family: ObjectSans;
 }
 
-#contact > h1 {
+#contact h1 {
     border-bottom: 2px solid var(--contact);
+    display: inline-block;
+}
+
+#contact a {
+    text-decoration: none;
+    color: white;
+} 
+
+#contact ul {
+    padding: 0 0 0 6%;
+}
+
+#contact li {
+    margin: 3vh 0 0; 
+    font-size: 1.5em;
+}
+
+#contact a:hover {
+    color: var(--vibrant-contact);
+    cursor: pointer;
 }
 
 #home-list {
