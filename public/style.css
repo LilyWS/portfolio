@@ -102,7 +102,7 @@ main {
     flex-flow: column nowrap;
     font-family: ObjectSans;
     justify-content: flex-start;
-    margin: 10vh auto;
+    margin: 20vh auto;
     min-width: 60vw;
     max-width: 1000px;
 }
@@ -118,6 +118,10 @@ main h1 {
     display: inline-block;
     /* line-height: 0.9; */
 }
+
+#about h1:hover {
+    cursor: default;
+} 
 
 /* projects styles */
 
@@ -164,6 +168,10 @@ main h1 {
     border-bottom: 2px solid var(--contact);
     display: inline-block;
 }
+
+#contact h1:hover {
+    cursor: default;
+} 
 
 #contact a {
     text-decoration: none;
