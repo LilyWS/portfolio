@@ -1,3 +1,10 @@
+:root {
+    --about: #e75367;
+    --projects: #e6df67;
+    /* --contact: #7fe9db; */
+    --contact: #79eede;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -9,22 +16,28 @@ body {
     color: white;
 }
 
-h1 {
+header h1 {
     font-size: 3.5em;
     font-weight: 500;
 }
 
 header {
     display: flex;
+    font-family: PrintClearly;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    padding: 0 2%;
+    padding: 4vh 2% 0;
     background-color: #181a18; /* #173f5f, #20639B*/
-    color: white;
+
 }
 
-header > h1:hover {
+header > a {
+    color: white;
+    text-decoration: none;
+}
+
+header > a:hover {
     cursor: pointer;
     color: #e75367;
 }
@@ -51,22 +64,40 @@ nav > a:hover {
 
 main {
     display: flex;
+    font-family: ObjectSans;
     justify-content: flex-start;
     margin: 10vh auto;
-    max-width: 800px;
+    max-width: 55vw;
 }
 
-section {
-    max-width: 800px;
+main h1 {
+    font-size: 2em;
 }
 
-section > h1 {
+/* section {
+} */
+
+#home > h1 {
     border-bottom: 2px solid #f12e48;
     display: inline-block;
-    line-height: 0.6;
+    line-height: 0.8;
+}
+
+#contact {
+    font-family: ObjectSans;
+    border-bottom: 2px solid var(--contact);
+}
+
+#home-list {
+    margin:5% 0 0 20%;
 }
 
 @font-face {
     font-family: PrintClearly;
     src: url("assets/printclearly.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ObjectSans;
+    src: url("assets/objectsans-regular.otf") format("opentype");
 }
