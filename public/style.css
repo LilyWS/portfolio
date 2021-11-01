@@ -1,25 +1,55 @@
-:root {
-    --background: #4a8beb;
-    --navBackground: #4a8beb;
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background-image: url(./assets/wario.jpg);
-    background-size: cover;
+    font-family: PrintClearly;
+    background-color: #374047;
 }
 
 h1 {
-    color: white;
-    font-size: 3em;
+    font-size: 3.5em;
+    font-weight: 500;
 }
 
-/* .navTitle {
-    color: #fff;
-    font-size: 2.2em;
-}
-
-.navbar {
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 10vh;
-    background-color: var(--navBackground);
-    border-bottom: 2px solid #7bc0f5; 
-} */
+    line-height: 10vh;
+    padding: 0 2%;
+    background-color: #374047; /* #173f5f, #20639B*/
+    color: white;
+}
+
+header > h1:hover {
+    cursor: default;
+    color: #e75367;
+}
+
+nav {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    font-size: 2em;
+    padding: 0 5%
+}
+
+nav > a {
+    color: white;
+    display: inline;
+    padding: 0 3%;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    color: #e75367;
+    cursor: default;
+    
+}
+
+@font-face {
+    font-family: PrintClearly;
+    src: url("assets/printclearly.otf") format("opentype");
+}
