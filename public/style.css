@@ -4,7 +4,9 @@
 
 body {
     font-family: PrintClearly;
-    background-color: #374047;
+    /* background-color: #374047; */
+    background-color: #181a18;
+    color: white;
 }
 
 h1 {
@@ -17,14 +19,13 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    line-height: 10vh;
     padding: 0 2%;
-    background-color: #374047; /* #173f5f, #20639B*/
+    background-color: #181a18; /* #173f5f, #20639B*/
     color: white;
 }
 
 header > h1:hover {
-    cursor: default;
+    cursor: pointer;
     color: #e75367;
 }
 
@@ -33,20 +34,36 @@ nav {
     display: flex;
     justify-content: space-around;
     font-size: 2em;
-    padding: 0 5%
+    padding: 0 5%;
+    cursor: default;
 }
 
 nav > a {
     color: white;
     display: inline;
-    padding: 0 3%;
+    padding: 0 5%;
     text-decoration: none;
 }
 
 nav > a:hover {
     color: #e75367;
-    cursor: default;
-    
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10vh auto;
+    max-width: 800px;
+}
+
+section {
+    max-width: 800px;
+}
+
+section > h1 {
+    border-bottom: 2px solid #f12e48;
+    display: inline-block;
+    line-height: 0.6;
 }
 
 @font-face {
