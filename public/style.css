@@ -173,11 +173,6 @@ main h1 {
     cursor: default;
 } 
 
-#contact a {
-    text-decoration: none;
-    color: white;
-} 
-
 #contact ul {
     padding: 0 0 0 6%;
 }
@@ -187,9 +182,27 @@ main h1 {
     font-size: 1.5em;
 }
 
-#contact a:hover {
+#contact a {
+    text-decoration: none;
+    color: white;
+} 
+
+#contact a::before {
+    position: absolute;
+    content: attr(data-content);
     color: var(--vibrant-contact);
+    background-color: var(--dark-gray);
+    opacity: 1;
+    clip-path: polygon(0 0, 0% 0, 0% 150%, 0% 150%);
+    transition: clip-path 70ms ease-out;
+}
+
+#contact a:hover {
     cursor: pointer;
+}
+
+#contact a:hover::before {
+    clip-path: polygon(0 0, 100% 0%, 100% 150%, 0 150%);
 }
 
 #home-list {
